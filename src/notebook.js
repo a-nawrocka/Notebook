@@ -4,7 +4,7 @@ class Notebook {
   }
 
   create(note){
-  this.notes.push(note)
+    this.notes.push(note)
   }
 
 	preview(notesIndex){
