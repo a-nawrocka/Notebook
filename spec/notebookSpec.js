@@ -41,3 +41,14 @@ it('adds a new to the note array', function () {
   n.create("meow")
   expect(n.notes.length).toEqual(1)
 })
+
+// preview method should output a string of >= 20 chars
+it('shows a note preview with less than 21 characters', function () {
+	let n = new Notebook()
+	n.create("123456789012345678901234567890")
+	console.log(n.preview(n.notes[0]).length)
+	expect(n.preview(n.notes[0]).length).toEqual(20)
+})
+
+// notes should be visible on notebook website
+// 
