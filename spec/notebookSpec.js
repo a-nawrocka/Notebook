@@ -36,3 +36,8 @@ it('2 + 3 is equal to 4', function (){
 it('outputs an array', function () {
   expect(hello).toBeAnArray()
 })
+it('adds a new to the note array', function () {
+  let n = new Notebook()
+  n.create("meow")
+  expect(n.notes.length).toEqual(1)
+})
