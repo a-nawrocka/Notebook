@@ -2,11 +2,15 @@
 <html>
 <head> 
      <!-- include source files here... -->
-  <script src="src/notebook.js"></script>
-  <script src="src/interface.js"></script>
+  <script defer src="src/notebook.js"></script>
+  <script defer src="src/interface.js"></script>
 </head>
 
 <body>
-  <div id="notes"> notes: </div>
+  <form id="create-note">
+    <textarea id="note-area" placeholder="write your efficient note HERE!"></textarea>
+    <input type="submit" value="create jetz!">
+  </form>
+  
 </body>
 </html>
