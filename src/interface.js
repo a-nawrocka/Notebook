@@ -1,7 +1,6 @@
 
   var notebook = new Notebook;
-  notebook.create("this is the first note");
- 
+  let n = new Notebook()
 
   var formElement = document.getElementById("create-note");
   formElement.addEventListener("submit", (event) => {

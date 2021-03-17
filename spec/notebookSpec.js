@@ -31,7 +31,7 @@ var hello = []
 ///------
 it('2 + 2 is equal to 4', function (){
     expect(2+2).toEqual(4)
-  })
+})
 
 it('2 + 3 is equal to 4', function (){
   expect(2+3).toEqual(4)
@@ -40,8 +40,9 @@ it('2 + 3 is equal to 4', function (){
 it('outputs an array', function () {
   expect(hello).toBeAnArray()
 })
+
 it('adds a new to the note array', function () {
-  let n = new Notebook()
+ 
   n.create("meow")
   expect(n.notes.length).toEqual(1)
 })
@@ -54,11 +55,9 @@ it('shows a note preview with less than 21 characters', function () {
 	expect(n.preview(n.notes[0]).length).toEqual(20)
 })
 
-  it("Adds the note from the textarea when createHandler is run", function() {
-      let textarea = document.getElementById("note-area")
-       textarea.value = "This should be the first note's text";
-      notebook.create(textarea.value)
-      expect(notebook.notes[0]).toEqual("This should be the first note's text");
-
-      clear()
-  })
+it("Adds the note from the textarea when createHandler is run", function() {
+	let textarea = document.getElementById("note-area")
+	textarea.value = "This should be the first note's text";
+	notebook.create(textarea.value)
+	expect(notebook.notes[0]).toEqual("This should be the first note's text");
+})
