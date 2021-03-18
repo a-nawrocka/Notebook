@@ -10,11 +10,22 @@ function showNotes(notes){
   var notelist = document.getElementById("note-list");
   let html = "";
   for (let i = 0; i < notes.length; i++) {
-    html += `<p>${notebook.preview(notes[i]) + `...`}</p>`;
+    html += `<p><a href="" id="${i}" class="note">${notebook.preview(notes[i]) + `...`}</a></p>`;
   }
   notelist.innerHTML = html;
+    
+  document.querySelectorAll(".note").forEach(note => { 
+    note.addEventListener("click", (event) => {
+      event.preventDefault();
+      showNote(event.target.id); 
+    })
+  })
 }
 
+function showNote(noteId) {
+  let showNote = document.getElementById("show-note");
+  showNote.innerHTML = notebook.notes[noteId];
+}
 function clearTextArea(id) {
 	document.getElementById(id).value = "";
 }
