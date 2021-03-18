@@ -2,21 +2,28 @@
   var notebook = new Notebook;
   let n = new Notebook()
   notebook.create("Hello this is working now!")
-  notebook.create("Guten tag Ani and Anna!")
+  notebook.create("123456789012345678901234567890cobol")
 
-  var formElement = document.getElementById("create-note");
-  formElement.addEventListener("submit", (event) => {
-    event.preventDefault();
-    var note = document.getElementById("note-area").value
-    notebook.create(note)
-  } )
+showNotes(notebook.notes)
 
+function showNotes(notes){
   var notelist = document.getElementById("note-list");
   let html = "";
-  for (let i = 0; i < notebook.notes.length; i++) {
-    html += `<p>${notebook.notes[i]}</p>`;
+  for (let i = 0; i < notes.length; i++) {
+    html += `<p>${notebook.preview(notes[i]) + `...`}</p>`;
   }
   notelist.innerHTML = html;
+}
+
+var formElement = document.getElementById("create-note");
+formElement.addEventListener("submit", (event) => {
+  event.preventDefault();
+  var note = document.getElementById("note-area").value
+  notebook.create(note)
+  showNotes(notebook.notes)
+})
+
+
 
 //  let html = "";
 //  for (let i = 0; i < noteList.length; i++) {

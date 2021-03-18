@@ -42,7 +42,7 @@ it('outputs an array', function () {
 })
 
 it('adds a new to the note array', function () {
- 
+
   n.create("meow")
   expect(n.notes.length).toEqual(1)
 })
@@ -53,11 +53,4 @@ it('shows a note preview with less than 21 characters', function () {
 	n.create("123456789012345678901234567890")
 	console.log(n.preview(n.notes[0]).length)
 	expect(n.preview(n.notes[0]).length).toEqual(20)
-})
-
-it("Adds the note from the textarea when createHandler is run", function() {
-	let textarea = document.getElementById("note-area")
-	textarea.value = "This should be the first note's text";
-	notebook.create(textarea.value)
-	expect(notebook.notes[0]).toEqual("This should be the first note's text");
 })
