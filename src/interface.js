@@ -15,12 +15,17 @@ function showNotes(notes){
   notelist.innerHTML = html;
 }
 
+function clearTextArea(id) {
+	document.getElementById(id).value = "";
+}
+
 var formElement = document.getElementById("create-note");
 formElement.addEventListener("submit", (event) => {
   event.preventDefault();
   var note = document.getElementById("note-area").value
   notebook.create(note)
   showNotes(notebook.notes)
+	clearTextArea("note-area")
 })
 
 
