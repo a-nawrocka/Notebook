@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-     <!-- include source files here... -->
+  <!-- include source files here... -->
   <script defer src="src/notebook.js"></script>
   <script defer src="src/interface.js"></script>
-	<script defer src="spec/notebookSpec.js"></script>
+  <script defer src="spec/notebookSpec.js"></script>
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
-  <script>
-    alert('Welcome!');
-    alert('Hallo!');
-  </script>
-  <form id="create-note">
-    <textarea id="note-area" placeholder="write your efficient note HERE!"></textarea>
-    <input type="submit" value="create jetz!">
-  </form>
-
-	<div id="note-list">
-	</div>
-
-  Your note!
-  <div id="show-note"></div>
-
+  <div class="column">
+    <form id="create-note">
+      <textarea id="note-area" placeholder="write your efficient note HERE!"></textarea>
+      <br />
+      <input type="submit" class="submit-btn" value="create jetz!">
+    </form>
+    <div id="note-list">
+    </div>
+    Your note!
+    <div id="show-note" class="note"></div>
+  </div>
 </body>
 </html>
