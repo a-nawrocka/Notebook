@@ -1,0 +1,25 @@
+.note {
+  color: rgb(5, 40, 5)
+}
+
+#note-area {
+  margin: 10px;
+  height: 148px;
+  width: 227px;
+  background-color: #faf6be;
+  border: 5px solid #fdfcc5;
+}
+
+.submit-btn {
+  margin-top: 0px;
+  margin-left: 160px;
+}
+
+body {
+
+}
+
+.column {
+  text-align: center; 
+}
+
