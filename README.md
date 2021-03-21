@@ -14,9 +14,3 @@ I can see the full text of an individual note on its own page
 So I can see all the information in the note
 ```
 
-### Bonus User Story
-```
-As a person of Germanic Origin
-I would like to see all text in Capitals
-So that I can feel understood
-```
